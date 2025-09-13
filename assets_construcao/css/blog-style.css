@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; 
+  scroll-behavior: smooth;
+  transition: 0.5s;
+}
+
+
+
+
+/*  ======================== */
+/*  ===== CLASS CENTER ===== */
+.center{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ===========================*/
+@media (max-width: 480px){
+    .center{
+        width: 90%;
+    }
+ }
+/* ===========================*/
+@media (min-width: 481px) and (max-width: 767px){
+        .center{
+        width: 470px;
+    }
+    }
+/* ===========================*/
+@media (min-width: 768px) and (max-width: 1024px){
+        .center{
+        width: 750px;
+    }
+    }
+/* ===========================*/
+@media (min-width: 1025px) and (max-width: 1200px){
+        .center{
+        width: 950px;
+    }
+    }
+/* ===========================*/
+@media (min-width: 1200px){
+        .center{
+        width: 1150px;
+    }
+}
+
+
+/*  ======================== */ 
+/*  ========  menu  ======== */
+#nav a strong{
+    color: #1c1a7d;
+    margin-left: 15px;
+}
+
+
+#nav{
+    position: fixed;
+    width: 100%;
+    height: 66px;
+    background-color: #fff;
+    border-bottom: solid 4px #000;
+    z-index: 50;
+}
+
+#nav ul {
+    text-align: right;
+    float: right;
+}
+
+#nav ul a{
+    color: #000;  
+}
+#nav ul a:hover{
+    color: #1c1a7d; 
+    transition: 0.01s;
+}
+
+#nav ul a li{
+    display: inline-block;
+    padding: 18px;
+}
+#nav ul a li:hover{
+    background-color: #FFFB00;
+}
+
+.logo{
+ float: left;
+}
+
+
+#nav ul ul{
+    display: none;
+}
+
+
+
+/* em construção */
+
+#img-construcao{
+    position: relative;
+    color: #1c1a7d;
+    max-width: 650px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+
+button{
+    color: #FFF;
+    background-color: #1c1a7d;
+    padding: 5px 20px;
+}
+
+button:hover{
+    color: #FFFB00;
+    background-color: #1c1a7d;
+    padding: 5px 20px;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -====== footer credito ======= */
+
+#credito{
+    width: 100%;
+    background-color: #FFF;
+    text-align: center;
+    float: left;
+}
+
+
+.col-01 p{
+    color: #1c1a7d;
+    font-weight: 500;
+    margin: 10px;
+}
+
+.col-02{
+    
+}
+
+.col-03{
+    margin: 5px;
+    border-top: solid 1px #6c6c6c;   
+}
+.col-03 a{
+    text-decoration: none;
+    color: #6c6c6c;
+}
+  
+
+
+
+/* - ===== BOTÃO TOPO ====== - */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 25px;
+  right: 1%;
+  z-index: 999;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  background: none;
+}
+                          
+#myBtn:hover {
+  background: none;
+}

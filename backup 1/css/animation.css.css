@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+/* ============== animação da mulher do banner ============== */
+@keyframes mulher-do-banner { 
+    
+    from{
+        transform: translatex(35px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+
+#mulher-do-banner {
+    animation: mulher-do-banner 20s;
+    animation-timing-function: ease-out;
+}
+
+
+
+
+

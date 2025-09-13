@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avaliação</title>
+      <!--  favicon -->
+  <link rel="icon" type="image/x-icon" href="../img/fav.png">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <!-- Barra Superior -->
+  <header class="header">
+    <div class="logo">
+      <img src="../img/logo.png" alt="Logo">
+    </div>
+    <div class="user-info">
+      <span id="username"></span><!-- puxa o nome do professor -->
+      <button id="logoutButton">Sair</button>
+    </div>
+  </header>
+
+  <!-- Formulário de Avaliação -->
+  <h2>Nome do Aluno</h2>
+  
+  <!-- Campo para exibir o nome do aluno - buscar do webhulk ou da planilha -->
+  <label for="studentName">Buscar:</label>
+  <input type="text" id="studentName" name="studentName" readonly><br>
+    
+  <main class="container">
+    <form id="evaluationForm">
+      <!-- Quadrantes -->
+      <div class="quadrants">
+        <div class="quadrant">
+          <label for="vocabulario">Vocabulário fornecido:</label>
+          <textarea id="vocabulario" placeholder="Digite aqui..." required minlength="2"></textarea>
+        </div>
+        <div class="quadrant">
+          <label for="pronuncia">Foco na pronúncia:</label>
+          <textarea id="pronuncia" placeholder="Digite aqui..." required minlength="2"></textarea>
+        </div>
+        <div class="quadrant">
+          <label for="gramatica">Foco na gramática:</label>
+          <textarea id="gramatica" placeholder="Digite aqui..." required minlength="2"></textarea>
+        </div>
+        <div class="quadrant">
+          <label for="comentariosGerais">Comentários gerais:</label>
+          <textarea id="comentariosGerais" placeholder="Digite aqui..." required minlength="2"></textarea>
+        </div>
+      </div>
+
+      <!-- Campo Horizontal -->
+      <div class="horizontal-field">
+        <label for="comentarioInterno">Comentário interno:</label>
+        <textarea id="comentarioInterno" rows="3" placeholder="Digite aqui..." required minlength="2"></textarea>
+      </div>
+
+      <!-- Notas -->
+      <div class="notas">
+  <div class="nota">
+    <input type="number" id="fpe" step="0.1" min="0" max="4" required>
+    <label for="fpe">FPE: Fluência, Pronúncia e Expressão Oral (0 à 4)</label>
+  </div>
+  <div class="nota">
+    <input type="number" id="cor" step="0.1" min="0" max="3" required>
+    <label for="cor">COR: Compreensão Oral (0 à 3)</label>
+  </div>
+  <div class="nota">
+    <input type="number" id="pat" step="0.1" min="0" max="2" required>
+    <label for="pat">PAT: Participação e Tarefa (0 à 2)</label>
+  </div>
+  <div class="nota">
+    <input type="number" id="q" step="0.1" min="0" max="1" required>
+    <label for="q">Q: Frequência (0 à 1)</label>
+  </div>
+</div>
+
+      <!-- Botão de Envio -->
+      <button type="submit" id="submitButton">Concluir</button>
+    </form>
+  </main>
+    
+    <script src="js/Name.js"></script>
+<script>
+    const loggedInUser = localStorage.getItem('loggedInUser');
+    if (loggedInUser) {
+      document.getElementById('username').textContent = `Professor: ${loggedInUser}`;
+    } else {
+      alert('Você precisa fazer login primeiro.');
+      window.location.href = '../index.html';
+    }
+
+    document.getElementById('logoutButton').addEventListener('click', () => {
+      localStorage.removeItem('loggedInUser');
+      window.location.href = '../index.html';
+    });
+  </script>
+</body>
+</html>

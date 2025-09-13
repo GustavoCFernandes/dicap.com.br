@@ -1,0 +1,121 @@
+:root {
+    --principal-a: #0A0438;
+    --principal-b: #262A87; /* variação */
+    --principal-c: #F7FBFF; /* cor clara */
+
+    --Font_Light: #3A3969;
+
+    --select: #0A0438; /* cor do hover */
+    --hover-2: #EB1A21;
+    --fundo-1: #fff; /* fundo branco */
+    --fundo-2: #FDE7DC; /* fundo escuro */
+    --fundo-3: #D3DCE9; /* fundo intermediário */
+}
+
+* {
+    font-family: "Barlow", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: -webkit-linear-gradient(left, var(--principal-b) 0%, var(--principal-a) 100%);
+    background: -o-linear-gradient(left, var(--principal-b) 0%, var(--principal-a) 100%);
+    background: linear-gradient(to left, var(--principal-b) 0%, var(--principal-a) 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--principal-c);
+}
+
+.container {
+    background: var(--fundo-1);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.logo {
+    margin: 0px 0px 0px 0px;
+    display: flex;
+}
+
+.logo img {
+    margin: auto;
+    
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: var(--Font_Light);
+    font-size: 24px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid var(--fundo-3);
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: var(--select);
+    outline: none;
+}
+
+
+
+button {
+    padding: 10px;
+    background: var(--principal-a);
+    color: var(--principal-c);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: var(--principal-b);
+}
+
+#error-message {
+    color: var(--hover-2);
+    margin-top: 15px;
+    display: none;
+}
+
+/* Estilo para o contêiner da senha */
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+/* Estilo para o ícone de olho */
+.toggle-password {
+  position: absolute;
+  right: 10px; 
+  top: 50%; 
+  transform: translateY(-50%);
+  color: var(--Font_Light); /* Cor do ícone */
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.toggle-password:hover {
+  color: var(--select); 
+}

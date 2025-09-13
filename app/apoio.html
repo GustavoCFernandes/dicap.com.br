@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Passo a Passo para Configurar o Webhook</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    ol {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    li {
+      margin-bottom: 15px;
+    }
+    code {
+      background: #f4f4f4;
+      padding: 5px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    .note {
+      background: #fffae6;
+      padding: 10px;
+      border-left: 4px solid #ffeb3b;
+      margin-top: 20px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Passos:</h2>
+  <ol>
+
+    <li>
+      <strong>Crie um Novo Cenário</strong>
+      <p>Clique em <strong>"Create a new scenario"</strong> para iniciar um novo cenário.</p>
+    </li>
+    <li>
+      <strong>Adicione o Módulo Webhook</strong>
+      <p>Procure por <code>Webhooks</code> e selecione <code>Custom Webhook</code>. Clique em <strong>"Add"</strong>.</p>
+    </li>
+    <li>
+      <strong>Crie um Novo Webhook</strong>
+      <p>No módulo do Webhook, clique em <strong>"Create a webhook"</strong>. Copie o URL gerado (esse será o link usado no JavaScript).</p>
+    </li>
+    <li>
+      <strong>Configure o Webhook para JSON</strong>
+      <p>Em <strong>"Settings"</strong>, escolha <code>JSON</code> como o formato de entrada e salve as configurações.</p>
+    </li>
+    <li>
+      <strong>Conecte ao Google Sheets</strong>
+      <p>Adicione um novo módulo ao cenário e selecione <code>Google Sheets</code>. Escolha a ação <code>Add a row to a sheet</code>.</p>
+    </li>
+    <li>
+      <strong>Mapeie os Dados</strong>
+      <p>Conecte sua conta do Google Sheets e selecione a planilha e a aba onde os dados serão inseridos. Mapeie os campos recebidos do Webhook para as colunas da planilha.</p>
+      <ul>
+        <li><code>studentName</code> → Coluna para o nome do aluno.</li>
+        <li><code>vocabulario</code> → Coluna para o vocabulário.</li>
+        <li><code>pronuncia</code> → Coluna para a pronúncia.</li>
+        <li><code>gramatica</code> → Coluna para a gramática.</li>
+        <li><code>comentariosGerais</code> → Coluna para comentários gerais.</li>
+        <li><code>comentarioInterno</code> → Coluna para comentário interno.</li>
+        <li><code>fpe</code>, <code>cor</code>, <code>pat</code>, <code>q</code> → Colunas para as notas.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Teste o Webhook</strong>
+      <p>Clique em <strong>"Run once"</strong> para testar o cenário. Use uma ferramenta como Postman ou cURL para enviar um exemplo de JSON para o Webhook.</p>
+      <pre><code>
+curl -X POST https://hook.us2.make.com/SEU_WEBHOOK_URL \
+-H "Content-Type: application/json" \
+-d '{
+  "studentName": "João Silva",
+  "vocabulario": "Bom uso de palavras.",
+  "pronuncia": "Pronúncia clara.",
+  "gramatica": "Boa estrutura gramatical.",
+  "comentariosGerais": "Excelente desempenho.",
+  "comentarioInterno": "Aluno dedicado.",
+  "fpe": 3.5,
+  "cor": 2.0,
+  "pat": 1.5,
+  "q": 1.0
+}'
+      </code></pre>
+    </li>
+    <li>
+      <strong>Atualize o Campo `studentName` Dinamicamente (Opcional)</strong>
+      <p>Para preencher automaticamente o campo <code>studentName</code>, crie outro Webhook para consultar a planilha e retornar o nome do aluno. Configure o JavaScript para fazer uma chamada GET ao Webhook de consulta.</p>
+    </li>
+  </ol>
+
+ 
+</body>
+</html>

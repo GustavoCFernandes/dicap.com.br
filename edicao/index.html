@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciador de Vídeos em Edição</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Gerenciador de Vídeos em Edição</h1>
+  <button class="add-card-button" onclick="addCard()">Adicionar Novo Vídeo</button>
+  <button class="save-button" onclick="saveCards()">Salvar Alterações</button>
+  <div class="card-container" id="cardContainer"></div>
+
+  <script>
+    // Função para carregar cards do servidor
+    function loadCards() {
+      fetch('load.php')
+        .then(response => response.json())
+        .then(data => {
+          console.log("Dados carregados:", data); // Depuração
+          const container = document.getElementById('cardContainer');
+          container.innerHTML = ''; // Limpa o container
+
+          // Ordena os cards pelo número fixo (cardNumber) antes de exibir
+          data.sort((a, b) => a.cardNumber - b.cardNumber);
+
+          data.forEach(cardData => addCard(cardData));
+        })
+        .catch(error => console.error("Erro ao carregar:", error));
+    }
+
+    // Função para salvar cards no servidor
+    function saveCards() {
+      const cards = Array.from(document.querySelectorAll('.card')).map(card => {
+        return {
+          id: card.id,
+          cardNumber: parseInt(card.querySelector('.card-number').textContent.replace('#', '')), // Número fixo
+          title: card.querySelector('input[name="title"]').value,
+          link: card.querySelector('input[name="link"]').value,
+          notes: card.querySelector('textarea[name="notes"]').value,
+          status: card.querySelector('select[name="status"]').value
+        };
+      });
+
+      console.log("Dados a serem salvos:", cards); // Depuração
+
+      fetch('save.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(cards)
+      })
+        .then(response => response.json())
+        .then(data => alert("Dados salvos com sucesso!"))
+        .catch(error => console.error("Erro ao salvar:", error));
+    }
+
+    // Função para adicionar um novo card
+    function addCard(data = {}) {
+      const container = document.getElementById('cardContainer');
+
+      // Gera o próximo número fixo para o card
+      const nextCardNumber = Array.from(document.querySelectorAll('.card'))
+        .map(card => parseInt(card.querySelector('.card-number').textContent.replace('#', '')))
+        .reduce((max, current) => Math.max(max, current), 0) + 1;
+
+      const card = document.createElement('div');
+      card.id = data.id || uniqid(); // Define o ID único do card
+      card.classList.add('card');
+
+      const statusBar = document.createElement('div');
+      statusBar.classList.add('status-bar');
+      if (data.status === 'Em processo') {
+        card.classList.add('status-em-processo');
+      } else if (data.status === 'Concluído') {
+        card.classList.add('status-concluido');
+      } else {
+        card.classList.add('status-nao-feito');
+      }
+      card.appendChild(statusBar);
+
+      const thumbnailWrapper = document.createElement('div');
+      thumbnailWrapper.style.position = 'relative';
+      const thumbnail = document.createElement('img');
+      thumbnail.src = data.link ? extractYouTubeThumbnail(data.link) : '';
+      thumbnail.onclick = () => {
+        if (!data.link || !data.link.startsWith('http')) {
+          alert("Link inválido ou não disponível.");
+          return;
+        }
+        window.open(data.link, '_blank');
+      };
+      const watchIcon = document.createElement('div');
+      watchIcon.classList.add('watch-icon');
+      watchIcon.textContent = '▶';
+      thumbnailWrapper.appendChild(thumbnail);
+      thumbnailWrapper.appendChild(watchIcon);
+      card.appendChild(thumbnailWrapper);
+
+      const cardInfo = document.createElement('div');
+      cardInfo.classList.add('card-info');
+
+      const cardNumberSpan = document.createElement('span');
+      cardNumberSpan.classList.add('card-number');
+      cardNumberSpan.textContent = `#${data.cardNumber || nextCardNumber}`; // Número fixo
+      cardInfo.appendChild(cardNumberSpan);
+
+      const titleInput = document.createElement('input');
+      titleInput.type = 'text';
+      titleInput.name = 'title';
+      titleInput.placeholder = 'Título do vídeo';
+      titleInput.value = data.title || '';
+      cardInfo.appendChild(titleInput);
+
+      const linkInput = document.createElement('input');
+      linkInput.type = 'url';
+      linkInput.name = 'link';
+      linkInput.placeholder = 'Link do vídeo';
+      linkInput.value = data.link || '';
+      linkInput.addEventListener('input', () => {
+        const videoId = extractYouTubeVideoId(linkInput.value);
+        if (videoId) {
+          thumbnail.src = `https://img.youtube.com/vi/${videoId}/default.jpg`;
+        } else {
+          thumbnail.src = '';
+        }
+      });
+      cardInfo.appendChild(linkInput);
+
+      const notesTextarea = document.createElement('textarea');
+      notesTextarea.name = 'notes';
+      notesTextarea.placeholder = 'Anotações...';
+      notesTextarea.value = data.notes || '';
+      cardInfo.appendChild(notesTextarea);
+
+      const statusSelect = document.createElement('select');
+      statusSelect.name = 'status';
+      const statuses = ['Não feito', 'Em processo', 'Concluído'];
+      statuses.forEach(status => {
+        const option = document.createElement('option');
+        option.value = status;
+        option.textContent = status;
+        if (status === data.status) option.selected = true;
+        statusSelect.appendChild(option);
+      });
+      statusSelect.addEventListener('change', () => {
+        card.className = 'card';
+        if (statusSelect.value === 'Em processo') {
+          card.classList.add('status-em-processo');
+        } else if (statusSelect.value === 'Concluído') {
+          card.classList.add('status-concluido');
+        } else {
+          card.classList.add('status-nao-feito');
+        }
+      });
+      cardInfo.appendChild(statusSelect);
+
+      const deleteButton = document.createElement('button');
+      deleteButton.textContent = 'Excluir';
+      deleteButton.onclick = () => {
+        if (confirm('Tem certeza que deseja excluir este card?')) {
+          card.remove();
+        }
+      };
+      cardInfo.appendChild(deleteButton);
+
+      card.appendChild(cardInfo);
+
+      // Adiciona o card ao topo do contêiner
+      container.prepend(card);
+    }
+
+    function extractYouTubeVideoId(url) {
+      const regex = /[?&]v=([^&#]*)/;
+      const match = url.match(regex);
+      return match ? match[1] : null;
+    }
+
+    function extractYouTubeThumbnail(url) {
+      const videoId = extractYouTubeVideoId(url);
+      return videoId ? `https://img.youtube.com/vi/${videoId}/default.jpg` : '';
+    }
+
+    // Carrega os cards ao iniciar a página
+    window.onload = loadCards;
+
+    // Função para gerar IDs únicos
+    function uniqid() {
+      return Math.random().toString(36).substr(2, 9);
+    }
+  </script>
+</body>
+</html>

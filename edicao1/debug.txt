@@ -1,0 +1,219 @@
+Array
+(
+    [0] => Array
+        (
+            [id] => xyd96zcti
+            [title] => teste la la la 2
+            [link] => 
+            [notes] => 
+            [status] => Não feito
+        )
+
+    [1] => Array
+        (
+            [id] => xa6uuoyo5
+            [title] => 1-HOUR VOCABULARY LESSON | 100 Phrases for Casual Conversation
+            [link] => https://www.youtube.com/watch?v=84miCo1NYGk
+            [notes] => 
+            [status] => Em processo
+        )
+
+    [2] => Array
+        (
+            [id] => wfngyeoq6
+            [title] => Patrick Lencioni : The Four Traits of Healthy Teams
+            [link] => https://www.youtube.com/watch?v=1KxJop0A0vA
+            [notes] => 
+            [status] => Em processo
+        )
+
+    [3] => Array
+        (
+            [id] => ss1ds5cwf
+            [title] => LISTEN AND REPEAT | Learn English through speeches | President Obama on Education
+            [link] => https://www.youtube.com/watch?v=xuJZ2BiqDV4
+            [notes] => 
+            [status] => Em processo
+        )
+
+    [4] => Array
+        (
+            [id] => qfhsas09m
+            [title] => The Five Dysfunctions of a Team by Patrick Lencioni
+            [link] => https://www.youtube.com/watch?v=75bO_XWk7fw
+            [notes] => DTGDXGD
+            [status] => Em processo
+        )
+
+    [5] => Array
+        (
+            [id] => pzt9lh27g
+            [title] => teste2
+            [link] => https://www.youtube.com/watch?v=-v3DAUrZJIY
+            [notes] => rtsrgf
+            [status] => Não feito
+        )
+
+    [6] => Array
+        (
+            [id] => mpqcc98w8
+            [title] => THE NO 1 RISK TO YOUR FUTURE - opção 01
+            [link] => https://www.youtube.com/shorts/kp8XKnu3pHQ
+            [notes] => 
+            [status] => Não feito
+        )
+
+    [7] => Array
+        (
+            [id] => l99lz9byg
+            [title] =>  teste 
+            [link] => https://www.youtube.com/watch?v=-v3DAUrZJIY
+            [notes] => dxfxg
+            [status] => Não feito
+        )
+
+    [8] => Array
+        (
+            [id] => k5n29bb58
+            [title] => AI Revolution & Future Jobs | Yuval Noah Harari | and Steven Bartell ‘The Diary of a CEO’ 
+            [link] => https://www.youtube.com/shorts/KNqr4tGXpFA
+            [notes] => 
+            [status] => Em processo
+        )
+
+    [9] => Array
+        (
+            [id] => jw0xdxx50
+            [title] => An Introduction to The Five Behaviors Powered by Everything DiSC®
+            [link] => https://www.youtube.com/watch?v=Rs7bPNslSuc
+            [notes] => 
+            [status] => Em processo
+        )
+
+    [10] => Array
+        (
+            [id] => ju52qqng1
+            [title] => THE NO 1 RISK TO YOUR FUTURE - opção 2
+            [link] => https://www.youtube.com/watch?v=revZsesG4_4
+            [notes] => 
+            [status] => Em processo
+        )
+
+    [11] => Array
+        (
+            [id] => hjdc2mhmr
+            [title] => Advanced (C2) Phrases to FLEX Your VOCABULARY MUSCLES 💪
+            [link] => https://www.youtube.com/watch?v=8iLhWTPReJY
+            [notes] => 
+            [status] => Em processo
+        )
+
+    [12] => Array
+        (
+            [id] => hiatry4fv
+            [title] => Learn English through Speeches - Listen and Repeat - President Obama - Happy Holidays
+            [link] => https://www.youtube.com/watch?v=A6qlvptTWoE
+            [notes] => 
+            [status] => Em processo
+        )
+
+    [13] => Array
+        (
+            [id] => gsn483k74
+            [title] => English sarcasm - What They Really Mean
+            [link] => https://www.youtube.com/watch?v=eVxFJUqyEkk
+            [notes] => DRGDGD
+            [status] => Em processo
+        )
+
+    [14] => Array
+        (
+            [id] => ee6iqc0li
+            [title] => 5 Minutes Book Summary - The Five Temptations of a CEO by Patrick Lencioni
+            [link] => https://www.youtube.com/watch?v=4j7Lw0BeJ6g
+            [notes] => 
+            [status] => Em processo
+        )
+
+    [15] => Array
+        (
+            [id] => 89mxp227w
+            [title] => O veganismo é DEMAIS para ele
+            [link] => https://www.youtube.com/watch?v=5Pm7cM-Ow0M
+            [notes] => 
+            [status] => Em processo
+        )
+
+    [16] => Array
+        (
+            [id] => 6zzo42pib
+            [title] => The Five Temptations of A CEO: A Leadership… by Patrick M. Lencioni · Audiobook preview
+            [link] => https://www.youtube.com/watch?v=IERr2XN8uJE
+            [notes] => 
+            [status] => Em processo
+        )
+
+    [17] => Array
+        (
+            [id] => 6x38tplvw
+            [title] => Learn English with President Barack Obama's speech - A high school education is not enough
+            [link] => https://www.youtube.com/watch?v=vrSeY0IF4_s
+            [notes] => 
+            [status] => Em processo
+        )
+
+    [18] => Array
+        (
+            [id] => 62yfz5upn
+            [title] => Do humans crave power? | Yuval Noah Harari on the Jordan Harbinger Show
+            [link] => https://www.youtube.com/shorts/Axy1mq3dZvA
+            [notes] => 
+            [status] => Em processo
+        )
+
+    [19] => Array
+        (
+            [id] => 5umz4f1kn
+            [title] => I Practice Thinking in English🔥Speaking Practice listening English🔥English Graded Reader🔥Graded ✅️ 1
+            [link] => https://www.youtube.com/watch?v=eyvuv6XEa-4
+            [notes] => VIDEO DE 2 HORAS
+            [status] => Em processo
+        )
+
+    [20] => Array
+        (
+            [id] => 519j9kwko
+            [title] => President Obama's speeches - PLAY-LIST 29 VÍDEOS
+            [link] => https://www.youtube.com/playlist?list=PLNEjHOBPN2dKlscfCKFr9MjJ-aSh2UZmR
+            [notes] => 
+            [status] => Em processo
+        )
+
+    [21] => Array
+        (
+            [id] => 32xl4gzqq
+            [title] => teste la la la 3 
+            [link] => 
+            [notes] => 
+            [status] => Concluído
+        )
+
+    [22] => Array
+        (
+            [id] => 2d4gc3mjz
+            [title] => teste  lalala
+            [link] => 
+            [notes] => 
+            [status] => Não feito
+        )
+
+    [23] => Array
+        (
+            [id] => 0ggrf1y11
+            [title] => The Five Temptations of A CEO: A Leadership… by Patrick M. Lencioni · Audiobook preview
+            [link] => https://www.youtube.com/watch?v=IERr2XN8uJE
+            [notes] => 
+            [status] => Em processo
+        )
+
+)

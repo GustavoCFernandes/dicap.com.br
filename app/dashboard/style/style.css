@@ -1,0 +1,167 @@
+/* Variáveis Globais */
+:root {
+  --primary-color: #0A0438;
+  --secondary-color: #262A87;
+  --background-color: #F7FBFF;
+  --text-color: #3A3969;
+  --hover-color: #EB1A21;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow", sans-serif;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+}
+
+.header .logo img {
+  width: 80px;
+  height: auto;
+}
+
+.header .user-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#logoutButton {
+  background: var(--hover-color);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#logoutButton:hover {
+  background: #c40e13;
+}
+
+/* Container Principal */
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Quadrantes */
+.quadrants {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.quadrant {
+  display: flex;
+  flex-direction: column;
+}
+
+.quadrant label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.quadrant textarea {
+  padding: 10px;
+  border: 1px solid var(--text-color);
+  border-radius: 5px;
+  resize: none;
+  height: 100px;
+}
+
+@media (max-width: 768px) {
+  .quadrants {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Campo Horizontal */
+.horizontal-field {
+  margin-top: 20px;
+}
+
+.horizontal-field label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.horizontal-field textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--text-color);
+  border-radius: 5px;
+  resize: none;
+}
+
+/* Notas */
+.notas {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espaçamento entre as linhas */
+}
+
+.nota {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Espaçamento entre o input e a legenda */
+}
+
+.nota input {
+  width: 100px; /* Largura fixa para os inputs */
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center; /* Centraliza o texto dentro do input */
+  flex-shrink: 0; /* Impede que o input encolha */
+}
+
+.nota label {
+  font-weight: bold;
+  flex-grow: 1; /* Faz com que a legenda ocupe o espaço restante */
+  text-align: left; /* Alinha o texto da legenda à esquerda */
+}
+/* Botão de Envio */
+#submitButton {
+  margin-top: 20px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 5px 10px; 
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: block; /* Torna o botão um bloco para centralizá-lo */
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 150px; 
+  text-align: center; 
+  font-size: 16px; 
+}
+
+#submitButton:hover {
+  background: var(--secondary-color); /* Altera a cor de fundo ao passar o mouse */
+}

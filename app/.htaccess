@@ -1,0 +1,62 @@
+# COMECE WordPress
+<IfModule mod_rewrite.c>
+Rewrite Engine On
+RewriteBase /
+Regra de reescrita ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}!-d
+Regra de Reescrita. /index.php [L]
+</IfModule>
+# FIM WordPress
+
+# 1 - Bloquear acesso aos arquivos não indexados
+Opções Todos - Índices
+#1 - FIM
+
+#2 - Bloquear acesso a pasta do wp-content
+Rewrite Engine On
+RewriteBase /
+Regra de regravação ^wp-admin/includes/ - [F,L]
+Regra de regravação !^wp-includes/ - [S=3]
+Regra de regravação ^wp-includes/[^/]+\.php$ - [F,L]
+Regra de regravação ^wp-includes/js/tinymce/langs/.+\.php - [F,L]
+Regra de regravação ^wp-includes/theme-compat/ - [F,L]
+# 2 - FIM
+
+#3 - Bloquear acesso ao wp-admim
+# OBS: Não esqueça de alterar a opção "seudominio.com.br" para o nome do seu domínio
+RewriteEngine ligado
+Reescrever Cond %{REQUEST_METHOD} POST
+RewriteCond %{HTTP_REFERER} !^http://(.*)?planoh.com.br/ [NC]
+RewriteCond %{REQUEST_URI} ^(.*)?wp-login\.php(.*)$ [OR]
+RewriteCond %{REQUEST_URI} ^(.*)?wp-admin$
+Regra de regravação ^(.*)$ - [F]
+#3 - FIM
+
+# 4 - Bloquear o arquivo wp-config.php
+<arquivos wp-config.php>
+ordem permitir, negar
+negar de todos
+</files>
+# 4 - FIM
+
+# 5 - Imperdir ataques de "Script Injection"
+Opções +FollowSymLinks
+Rewrite Engine On
+RewriteCond %{QUERY_STRING} (<|%3C).*script.*(>|%3E) [NC,OR]
+RewriteCond %{QUERY_STRING} GLOBALS(=|[|%[0-9A-Z]{0,2}) [OR]
+RewriteCond %{QUERY_STRING} _REQUEST(=|[|%[0-9A-Z]{0,2})
+RewriteRule ^(.*)$ index.php [F,L]
+# 5 - FIM
+
+# Bloqueia o acesso direto à pasta "backend"
+<Directory "/home/usuario/backend">
+  Order Allow,Deny
+  Deny from all
+</Directory>
+
+# Bloqueia o acesso a arquivos específicos
+<Files "config.js">
+  Order Allow,Deny
+  Deny from all
+</Files>

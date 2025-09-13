@@ -1,0 +1,183 @@
+Array
+(
+    [0] => Array
+        (
+            [id] => az6wh93bq
+            [cardNumber] => 18
+            [title] => The Five Dysfunctions of a Team by Patrick Lencioni
+            [link] => https://www.youtube.com/watch?v=75bO_XWk7fw
+            [notes] => 
+            [status] => Em processo
+        )
+
+    [1] => Array
+        (
+            [id] => nmkzoo9d7
+            [cardNumber] => 17
+            [title] => Patrick Lencioni : The Four Traits of Healthy Teams
+            [link] => https://www.youtube.com/watch?v=1KxJop0A0vA
+            [notes] => 
+            [status] => Não feito
+        )
+
+    [2] => Array
+        (
+            [id] => y51yrssvh
+            [cardNumber] => 16
+            [title] => The Five Temptations of A CEO: A Leadership… by Patrick M. Lencioni · Audiobook preview
+            [link] => https://www.youtube.com/watch?v=IERr2XN8uJE
+            [notes] => 
+            [status] => Não feito
+        )
+
+    [3] => Array
+        (
+            [id] => jk4ilgexj
+            [cardNumber] => 15
+            [title] => An Introduction to The Five Behaviors Powered by Everything DiSC®
+            [link] => https://www.youtube.com/watch?v=Rs7bPNslSuc
+            [notes] => 
+            [status] => Não feito
+        )
+
+    [4] => Array
+        (
+            [id] => d6sgb60hl
+            [cardNumber] => 14
+            [title] => 5 Minutes Book Summary - The Five Temptations of a CEO by Patrick Lencioni
+            [link] => https://www.youtube.com/watch?v=4j7Lw0BeJ6g
+            [notes] => 
+            [status] => Não feito
+        )
+
+    [5] => Array
+        (
+            [id] => 2hh0yuy3h
+            [cardNumber] => 13
+            [title] => I Practice Thinking in English🔥Speaking Practice listening English🔥English Graded Reader🔥Graded ✅️ 1
+            [link] => https://www.youtube.com/watch?v=eyvuv6XEa-4
+            [notes] => 
+            [status] => Não feito
+        )
+
+    [6] => Array
+        (
+            [id] => 7lo0rjesn
+            [cardNumber] => 12
+            [title] => O veganismo é DEMAIS para ele
+            [link] => https://www.youtube.com/watch?v=5Pm7cM-Ow0M
+            [notes] => 
+            [status] => Não feito
+        )
+
+    [7] => Array
+        (
+            [id] => sxwfkekt7
+            [cardNumber] => 11
+            [title] => Learn English with President Barack Obama's speech - A high school education is not enough
+            [link] => https://www.youtube.com/watch?v=vrSeY0IF4_s
+            [notes] => 
+            [status] => Concluído
+        )
+
+    [8] => Array
+        (
+            [id] => amqzpm6zq
+            [cardNumber] => 10
+            [title] => President Obama's speeches - PLAY-LIST com 29 vídeos.
+            [link] => https://www.youtube.com/playlist?list=PLNEjHOBPN2dKlscfCKFr9MjJ-aSh2UZmR
+            [notes] => 
+            [status] => Concluído
+        )
+
+    [9] => Array
+        (
+            [id] => g2xresv9n
+            [cardNumber] => 9
+            [title] => AI Revolution & Future Jobs | Yuval Noah Harari | and Steven Bartell ‘The Diary of a CEO’ 
+            [link] => https://www.youtube.com/shorts/KNqr4tGXpFA?feature=share
+            [notes] => 
+            [status] => Não feito
+        )
+
+    [10] => Array
+        (
+            [id] => 2vt1tqjcj
+            [cardNumber] => 8
+            [title] => Do humans crave power? | Yuval Noah Harari on the Jordan Harbinger Show
+            [link] => https://www.youtube.com/shorts/Axy1mq3dZvA?feature=share
+            [notes] => 
+            [status] => Não feito
+        )
+
+    [11] => Array
+        (
+            [id] => npsbd7hjs
+            [cardNumber] => 7
+            [title] => Learn English through Speeches - Listen and Repeat - President Obama - Happy Holidays
+            [link] => https://www.youtube.com/watch?v=A6qlvptTWoE
+            [notes] => 
+            [status] => Concluído
+        )
+
+    [12] => Array
+        (
+            [id] => rezxmr0kb
+            [cardNumber] => 6
+            [title] => LISTEN AND REPEAT | Learn English through speeches | President Obama on Education
+            [link] => https://www.youtube.com/watch?v=xuJZ2BiqDV4
+            [notes] => 
+            [status] => Concluído
+        )
+
+    [13] => Array
+        (
+            [id] => bb960o7j6
+            [cardNumber] => 5
+            [title] => THE NO 1 RISK TO YOUR FUTURE - OPÇÃO 2 DE "Key to a successful life...".
+            [link] => https://www.youtube.com/watch?v=revZsesG4_4
+            [notes] => 
+            [status] => Não feito
+        )
+
+    [14] => Array
+        (
+            [id] => 3lv5pzclk
+            [cardNumber] => 4
+            [title] => Key to a successful life...
+            [link] => https://www.youtube.com/shorts/kp8XKnu3pHQ
+            [notes] => 
+            [status] => Não feito
+        )
+
+    [15] => Array
+        (
+            [id] => twieiqetb
+            [cardNumber] => 3
+            [title] => Advanced (C2) Phrases to FLEX Your VOCABULARY MUSCLES 💪
+            [link] => https://www.youtube.com/watch?v=8iLhWTPReJY
+            [notes] => 
+            [status] => Não feito
+        )
+
+    [16] => Array
+        (
+            [id] => q9px72frz
+            [cardNumber] => 2
+            [title] => 1-HOUR VOCABULARY LESSON | 100 Phrases for Casual Conversation
+            [link] => https://www.youtube.com/watch?v=84miCo1NYGk
+            [notes] => 
+            [status] => Em processo
+        )
+
+    [17] => Array
+        (
+            [id] => nxvaktwyj
+            [cardNumber] => 1
+            [title] => English sarcasm - What They Really Mean
+            [link] => https://www.youtube.com/watch?v=eVxFJUqyEkk
+            [notes] => 
+            [status] => Não feito
+        )
+
+)

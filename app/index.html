@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DICAP - Login do Professor</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="img/fav.png">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style/styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Logo SVG -->
+    <div class="logo">
+      <img src="img/logo.png" height="90px">
+    </div>
+    <h2>Área do Professor</h2>
+
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Nome de Usuário" required>
+      
+      <!-- Campo de Senha com Ícone de Olho -->
+      <div class="password-container">
+        <input type="password" id="password" placeholder="Senha" required>
+        <i class="fa-solid fa-eye toggle-password" id="togglePassword"></i>
+      </div>
+
+      <button type="submit">Entrar</button>
+      <p id="errorMessage" class="error-message">Credenciais inválidas</p>
+    </form>
+  </div>
+
+  <!-- Link para o arquivo JavaScript -->
+  <script src="script.js"></script>
+  <script src="script_Log.js"></script>
+</body>
+</html>
